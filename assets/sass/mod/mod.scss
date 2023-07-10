@@ -1,0 +1,134 @@
+.dropdown-div{
+    display: grid;
+    place-items: center;
+    margin: 0;
+    background: #45494e7a;
+}
+
+.dropdown {
+  position: relative;
+  cursor: pointer;
+  translate: rem 0;
+
+
+  img{
+    
+    height: 2rem;
+  }
+
+     button  {
+        width: 170px;
+        height: 60px;
+        border: 0;
+        font-size:  17px;
+    }
+
+    p{
+        padding-top: 1rem;
+    }
+    .dropdown-content {
+    
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      color: #f7f7f7;
+     
+      
+
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 6px;
+          right: 10%;
+          width: 80%;
+          height: 1px;
+          transform: scaleX(0);
+          background: rgba(255, 255, 255, 0);
+          transition: 0.3s;
+        }
+        span{
+            &:first-child{
+                font-size: 2rem;
+            }
+            &:last-child{
+            margin-left: auto;
+            transition: 0.3s;
+        }
+
+        }
+    }
+     &:hover{
+       .dropdown-content{
+            &::after{
+                transform: scaleX(1);
+            }
+            span:last-child{
+                rotate: -180deg;
+            }
+        }
+
+        .dropdown-menu{
+           
+                visibility: visible;
+                opacity: 1;
+                scale: 1;
+           
+        }
+
+    }
+
+    .dropdown-menu{
+        
+        width: 110%;
+        position: absolute;
+        z-index: 1;
+        top: -6px;
+        left: 50%;
+        display: grid;
+        padding: 70px 0 6px;
+        border-radius: 6px;
+        translate: -50% 0;
+        visibility: hidden;
+        opacity: 0;
+        scale: 0.85;
+        transition: 0.3s;
+        background: rgb(73, 73, 73);
+        border: 0.1rem solid white;
+
+
+       
+        .dropdown-option {
+            display: flex;
+             align-items: center;
+             gap: 10px;
+             font-size: 14px;
+             padding: 0 24px;
+
+             border-width: 1px;
+             border-color: #f7f7f7;
+             &:hover{
+                background: rgb(0 0 0 / 10%);
+
+             }
+             p{
+                padding-top: 2rem;
+            }
+
+        }
+    }
+}
+
+// .dropdown-btn {
+// }
+// .dropdown-menu {
+// }
+// .dropdown-content {
+// }
