@@ -16,6 +16,8 @@
 		$main_articles = $main.children('article');
 
 		$lang = $('#lang')
+		$URLactual = $(location).attr('host');
+
 		
 
 	// Breakpoints.
@@ -404,11 +406,21 @@
 		//mods
 
 		$(onload)
+
+
+
 			//change language center
 			var textChange = $(`*[data-section]`)
 
 			const changeLanguage = async language=>{
-				const requestJson = await fetch(`../lang/${language}.json`)
+				let requestJson
+
+				if ($URLactual === "bakursu.github.io") {
+					requestJson = await fetch(`https://raw.githubusercontent.com/bakursu/Portafolio/main/lang/${language}.json`)
+					
+				}else{
+				 requestJson = await fetch(`../lang/${language}.json`)
+			}
 				const text = await requestJson.json();
 				
 				console.log();
@@ -442,6 +454,7 @@
 			} 
 
 			changeLanguage(localStorage.getItem("lang"))
+			
 			
 
 })(jQuery);
