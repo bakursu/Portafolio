@@ -28,22 +28,28 @@
         <!-- Dropdown language -->
         <div class="dropdown dropdown-div">
           <div class="dropdown-content">
-            <span><img src="./images/icon/es.svg" alt="spain" class="" /></span>
-            <p>Idioma</p>
-            <span class="fas fa-caret-down "></span>
+            <!-- ubicacion de cada bandera en el json con html5 -->
+            <span
+            data-section="lang"
+            data-value="langFlag"
+            ><img src="./images/icon/es.svg" alt="spain"  /></span>
+            <p
+            data-section="lang"
+            data-value="title"
+            >Idioma</p>
+            <span class="fas fa-caret-down"></span>
           </div>
 
           <button type="button" class="dropdown-btn"></button>
 
-          <div class="dropdown-menu">
+          <div class="dropdown-menu" id="lang">
             <div class="dropdown-option" data-language="es">
-              <img src="./images/icon/es.svg" alt="Spain" />
+              <img src="./images/icon/es.svg" alt="Español" />
               <p>Español</p>
             </div>
-
-            <div class="dropdown-option" data-language="es">
-              <img src="./images/icon/gb.svg" alt="England" />
-              <p>Ingles</p>
+            <div class="dropdown-option" data-language="en">
+              <img src="./images/icon/gb.svg" alt="English" />
+              <p>English</p>
             </div>
           </div>
         </div>
@@ -55,13 +61,10 @@
         <div class="content">
           <div class="inner">
             <h1>Jose David Rios</h1>
-            <h3 class="test">muajajajja</h3>
-            <p>
+            <p data-section="profile" data-value="descripcion">
               Soy deasrrollador de aplicaciones web y movil. Ingeniero en
-              electronica que a aprendido a aplicar los conocimientos
-            </p>
-            <p>
-              de electronica para un desarrollo mas eficaz en este medio,
+              electronica que a aprendido a aplicar los conocimientos de
+              electronica para un desarrollo mas eficaz en este medio,
               automatizando las tareas para tu confort
             </p>
 
@@ -69,16 +72,30 @@
               href="./Documents/Jose Rios CV español.pdf"
               class="button icon solid fa-download"
               target="_blank"
+              data-section="profile"
+              data-value="btn-download"
               >descargar CV</a
             >
           </div>
         </div>
         <nav>
           <ul>
-            <li><a href="#intro">Conoceme</a></li>
-            <li><a href="#work">Trabajos</a></li>
-            <li><a href="#about">Habilidades</a></li>
-            <li><a href="#contact">Contacto</a></li>
+            <li>
+              <a data-section="nav" data-value="main" href="#intro">Conoceme</a>
+            </li>
+            <li>
+              <a data-section="nav" data-value="work" href="#work">Trabajos</a>
+            </li>
+            <li>
+              <a data-section="nav" data-value="skills" href="#about"
+                >Habilidades</a
+              >
+            </li>
+            <li>
+              <a data-section="nav" data-value="contact" href="#contact"
+                >Contacto</a
+              >
+            </li>
             <!-- <li><a href="./elements.html">Elements</a></li> -->
           </ul>
         </nav>
@@ -88,14 +105,16 @@
       <div id="main">
         <!-- Intro -->
         <article id="intro">
-          <h2 class="major">Es un placer conocerte!</h2>
+          <h2 class="major" data-section="main" data-value="title">
+            Es un placer conocerte!
+          </h2>
           <span class="image main"
             ><img
-              src="images/personal/sho.jpg"
+              src="images/personal/sho2.JPG"
               alt=""
-              style="height: 200px; object-fit: cover"
+              style="height: 200px; object-fit: cover; object-position: 0 25%;"
           /></span>
-          <p>
+          <p data-section="main" data-value="body">
             Soy Jose David Rios, y ya que estas buscando a alguien con buenas
             capacidades creativas para hacer de tu vida mas comoda ¡Entonces
             estas en el lugar correcto! Me encataria que tengamos la oportunidad
@@ -103,26 +122,31 @@
             Habilidadesde programacion y Gestion de proceso
           </p>
 
-          <p>¡Te invito a que nos pongamos en contacto!</p>
+          <p data-section="main" data-value="footer">
+            ¡Te invito a que nos pongamos en contacto!
+          </p>
 
-          <a href="#contact" class="button">CONTACTO</a>
+          <a href="#contact" class="button" data-section="main" data-value="btn-contact">CONTACTO</a>
         </article>
 
         <!-- Work -->
         <article id="work">
-          <h2 class="major">Trabajos realizados</h2>
+          <h2 class="major"
+          data-section="work"
+          data-value="title"
+          >Trabajos realizados</h2>
           <span class="image main"
             ><img
               src="images/resources/Working late-amico.svg"
               alt=""
               style="height: 200px"
           /></span>
-          <p>
+          <p data-section="work"
+          data-value="body">
             Un pequeño listado de mi proyectos personales, y su enlace para su
             vizualizacion Hay experiencia en diferentes campos relacionados
             entre si
           </p>
-
           <!-- colocar el enlace del trabajo -->
           <div>
             <ul class="actions">
@@ -181,28 +205,37 @@
 
         <!-- skills -->
         <article id="about">
-          <h2 class="major">Habilidades que manejo</h2>
+          <h2 class="major" 
+          data-section="skills"
+          data-value="title"
+          >Habilidades que manejo</h2>
           <span class="image main"
             ><img
               src="images/resources/Resume folder-amico.svg"
               alt="cv-icono"
               style="height: 200px"
           /></span>
-          <p>
+          <p
+          data-section="skills"
+          data-value="body">
             No solo poseo un dominio de algunos lenguajes, si no que tambien
             puedo resaltas mi facilidad en ciertas habilidades blandas
             necesarias para diversos entornos de trabajo
           </p>
-          <h3>Habilidades tecnicas</h3>
-          <ul>
+          <h3 data-section="skills"
+          data-value="titleSkills"
+          >Habilidades tecnicas</h3>
+          <ul data-section="skills" data-value="listSkills">
             <li>HTML, CSS, javascript</li>
             <li>WordPress</li>
             <li>Kotlin</li>
             <li>Python</li>
             <li>Bootstrap</li>
           </ul>
-          <h3>Habilidades Blandas</h3>
-          <ul>
+          <h3  data-section="skills"
+          data-value="titleSoftSkills">Habilidades Blandas</h3>
+          <ul data-section="skills"
+          data-value="listSoftSkills">
             <li>Facilidad en Documentacion</li>
             <li>Gestion de cambios</li>
             <li>Creatividad</li>
@@ -212,20 +245,27 @@
 
         <!-- Contact -->
         <article id="contact">
-          <h2 class="major">Contacto</h2>
-          <p>
+          <h2 class="major"
+           data-section="contact"
+          data-value="title"
+          >Contacto</h2>
+          <p data-section="contact"
+          data-value="body">
             Podemos conversar a traves de los direntes enlaces y redes sociales
           </p>
-          <h3>Correo</h3>
+          <h3 data-section="contact"
+          data-value="titleMail">Correo</h3>
           <p><a href="mailto:jdrios.c7@gmail.com">jdrios.c7@gmail.com</a></p>
 
-          <h3>Telefono</h3>
+          <h3 data-section="contact"
+          data-value="titleTel">Telefono</h3>
           <p>
             <a href="https://wa.me/584246317889" target="_blank"
               >+584246317889</a
             >
           </p>
-          <h3>Redes sociales</h3>
+          <h3 data-section="contact"
+          data-value="titleSocialMedia">Redes sociales</h3>
           <ul class="icons">
             <li>
               <a
@@ -261,7 +301,8 @@
           &copy;
           <a href="https://www.instagram.com/palitodev/" target="_blank"
             >palitodev</a
-          >. Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a>.
+          >. <span>Design</span>:
+          <a href="https://html5up.net" target="_blank">HTML5 UP</a>.
         </p>
       </footer>
     </div>
@@ -270,7 +311,7 @@
     <div id="bg"></div>
 
     <!-- Scripts -->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>

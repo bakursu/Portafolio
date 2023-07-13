@@ -15,6 +15,9 @@
 		$main = $('#main'),
 		$main_articles = $main.children('article');
 
+		$lang = $('#lang')
+		
+
 	// Breakpoints.
 		breakpoints({
 			xlarge:   [ '1281px',  '1680px' ],
@@ -398,5 +401,47 @@
 					$window.on('load', function() {
 						$main._show(location.hash.substr(1), true);
 					});
+		//mods
+
+		$(onload)
+			//change language center
+			var textChange = $(`*[data-section]`)
+
+			const changeLanguage = async language=>{
+				const requestJson = await fetch(`../lang/${language}.json`)
+				const text = await requestJson.json();
+				
+				console.log();
+
+				for (let textToChange of textChange) {
+					const section = $(textToChange).attr('data-section')
+					const value = $(textToChange).attr(`data-value`)
+					
+					$(textToChange).html(text[section][value]);
+					
+					
+				}
+				
+			}
+
+			$($lang).click(function (lang) { 
+
+				if (lang.target.parentElement.dataset.language == undefined){
+					localStorage.setItem("lang", lang.target.dataset.language)
+					 changeLanguage(lang.target.dataset.language)
+				}else {
+					localStorage.setItem("lang", lang.target.parentElement.dataset.language)
+					changeLanguage(lang.target.parentElement.dataset.language)
+				}
+
+			});
+
+
+			if (localStorage.getItem("lang") === null) {
+				localStorage.setItem("lang", "es")
+			} 
+
+			changeLanguage(localStorage.getItem("lang"))
+			
 
 })(jQuery);

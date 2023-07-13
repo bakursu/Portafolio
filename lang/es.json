@@ -1,0 +1,51 @@
+{
+    "lang":{
+        "title":"Español",
+        "langFlag":"<img src='./images/icon/es.svg' alt='spain'/>"
+    },
+    "profile":{
+        "Name":"Jose David Rios Colmenares",
+        "descripcion":"Soy desarrollador de aplicaciones web y móvil. Ingeniero en electrónica que ha aprendido a aplicar los conocimientos de electrónica para un desarrollo más eficaz en este medio, automatizando las tareas para tu confort",
+        "btn-download":"Descargar CV"
+    },
+    "nav":{
+        "main":"Conoceme",
+        "work":"Trabajos",
+        "skills":"Habilidades",
+        "contact":"Contacto"
+    }
+    ,
+    "main":{
+        "title":"Es un placer conocerte!",
+        "body":"Soy Jose David Rios, y ya que estás buscando a alguien con buenas capacidades creativas para hacer de tu vida más cómoda ¡Entonces estas en el lugar correcto! Me encantaría que tengamos la oportunidad de conocernos y contribuir al éxito de tu empresa con mis Habilidades de programación y Gestión de proceso",
+        "footer":"¡Te invito a que nos pongamos en contacto!",
+        "btn-contact":"Contacto"
+    },
+    "work":{
+        "title": "TRABAJOS REALIZADOS",
+        "body":"Un pequeño listado de mi proyectos personales, y su enlace para su vizualizacion Hay experiencia en diferentes campos relacionados entre si"
+    },
+    "skills":{
+        "title":"Habilidades que manejo",
+        "body":"No solo poseo un dominio de algunos lenguajes, si no que tambien puedo resaltas mi facilidad en ciertas habilidades blandas necesarias para diversos entornos de trabajo",
+        "titleSkills":"Habilidades tecnicas",
+        "listSkills":"<li>HTML, CSS, javascript</li> <li>WordPress</li> <li>Kotlin</li> <li>Python</li> <li>Bootstrap</li>",
+        "titleSoftSkills":"Habilidades Blandas",
+        "listSoftSkills":"<li>Facilidad en Documentacion</li> <li>Gestion de cambios</li> <li>Creatividad</li> <li>Resolucion de conflictos</li>"
+    },
+    "contact":{
+        "title":"CONTACTO",
+        "body":"Podemos conversar a traves de los direntes enlaces y redes sociales",
+        "titleMail":"Correo",
+        "titleTel":"Telefono",
+        "titleSocialMedia":"Redes Sociales"
+    },
+    "footer":{
+        "thiIsADesignWord":"Diseño"
+
+    }
+
+
+
+
+}

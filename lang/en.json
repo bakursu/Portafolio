@@ -1,0 +1,52 @@
+{
+    "lang":{
+        "title":"English",
+        "langFlag":"<img src='./images/icon/gb.svg' alt='spain'/>"
+
+    },
+    "profile":{
+        "Name":"Jose David Rios Colmenares",
+        "descripcion":"I am a developer of web and mobile applications. Electronics engineer who has learned to apply knowledge of electronics for a more efficient development in this environment, automating tasks for your comfort.",
+        "btn-download":"Download CV"
+    },
+    "nav":{
+        "main":"About",
+        "work":"Works",
+        "skills":"Skills",
+        "contact":"Contact"
+    }
+    ,
+    "main":{
+        "title":"Nice to meet you!!",
+        "body":"hi!, I'm Jose David Rios, and if you're looking for someone whit good creative skills to make your automate your life, then yo're in the right place! I would love for us to have the opportunity to meet and contribute to the success of your company with my Programming Skills and Process Management",
+        "footer":"I invite you to contact me!",
+        "btn-contact":"contact"
+    },
+    "work":{
+        "title": "Portfolio of jobs",
+        "body":"A small list of my personal projects, and their link for viewing. There is experience in different related fields."
+    },
+    "skills":{
+        "title":"some of my skills",
+        "body":"Not only do I have a command of some programming languages, but I can also highlight my facility in certain soft skills necessary for various work environments",
+        "titleSkills":"Technical skills",
+        "listSkills":"<li>HTML, CSS, javascript</li> <li>WordPress</li> <li>Kotlin</li> <li>Python</li> <li>Bootstrap</li>",
+        "titleSoftSkills":"Soft skills",
+        "listSoftSkills":"<li>Ease of Documentation</li> <li>Change Management</li> <li>Creativity</li> <li>Conflict Resolution</li>"
+    },
+    "contact":{
+        "title":"contact",
+        "body":"We can talk through the different links and social networks",
+        "titleMail":"Mail",
+        "titleTel":"Phone",
+        "titleSocialMedia":"Social Networks"
+    },
+    "footer":{
+        "thiIsADesignWord":"Design"
+
+    }
+
+
+
+
+}
