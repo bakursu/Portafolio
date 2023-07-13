@@ -13,10 +13,11 @@
 		$header = $('#header'),
 		$footer = $('#footer'),
 		$main = $('#main'),
-		$main_articles = $main.children('article');
+		$main_articles = $main.children('article'),
 
-		$lang = $('#lang')
-		$URLactual = $(location).attr('host');
+		$lang = $('#lang'),
+		$URLactual = $(location).attr('host'),
+		$cvLink = $('#cvLink');
 
 		
 
@@ -423,16 +424,17 @@
 			}
 				const text = await requestJson.json();
 				
-				console.log();
+			
 
 				for (let textToChange of textChange) {
 					const section = $(textToChange).attr('data-section')
 					const value = $(textToChange).attr(`data-value`)
 					
 					$(textToChange).html(text[section][value]);
-					
-					
 				}
+
+				// cambiar idioma del cv
+				$cvLink.attr('href',`./Documents/Jose_Rios_CV_${language}.pdf`)
 				
 			}
 
@@ -454,6 +456,7 @@
 			} 
 
 			changeLanguage(localStorage.getItem("lang"))
+			
 			
 			
 
