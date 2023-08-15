@@ -19,6 +19,7 @@
 		$URLactual = $(location).attr('host'),
 		$cvLink = $('#cvLink');
 
+
 		
 
 	// Breakpoints.
@@ -447,6 +448,8 @@
 					localStorage.setItem("lang", lang.target.parentElement.dataset.language)
 					changeLanguage(lang.target.parentElement.dataset.language)
 				}
+				
+			
 
 			});
 
